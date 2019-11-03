@@ -15,7 +15,6 @@ It allows to create 2 kind of React components:
 For each one of these 2 kind of component, you can choose:
 * which React component to use: `PureComponent Class`, `Component Class` and `Stateless Function`
 * to use [ReactI18n](https://react.i18next.com/) or not (multilingualism)
-* to use [Typescript](https://www.typescriptlang.org/) or not (Type checker)
 * to use [Storybook](https://storybook.js.org/) or not (Component Explorer)
 
 See [Examples](./examples)
@@ -72,10 +71,10 @@ By default, Plop-react has default configurations:
   defaultComponentName: 'Button',           		// default name for component
   defaultContainerName: 'Icon',             		// default name for containers
   defaultComponentType: 'PureComponent Class',  	// use PureComponent Class by default
+  useTypescript: true,                   		// create Typescript files
   useReactI18nByDefault: true,              		// use ReactI18n by default
-  useTypescriptByDefault: true,                   	// use Typescript by default
-  useRedux: false,					// use Redux files by default  
-  useScss: true,					// use SCSS files by default
+  useReduxByDefault: false,				// use Redux files by default  
+  useScssByDefault: true,				// use SCSS files by default
 };
 
 ```

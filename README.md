@@ -9,6 +9,7 @@ It allows to create 2 kind of React components:
 * React Container (or View): Component with the boilerplate for mapping application state to component's props by using [Redux](https://redux.js.org/) (`mapStateToProps &  mapDispatchToProps`).
     * `<Component name>.container.{jsx|tsx}`
     * `<Component name>.{jsx|tsx}`
+    * `<Component name>.{scss|css}`    
     * `<Component name>.test.{jsx|tsx}`
     * `index.{jsx|tsx}`
 

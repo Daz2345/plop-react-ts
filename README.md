@@ -1,22 +1,22 @@
-# plop-react
+# plop-react-ts
 A [plop](https://plopjs.com/) generator for creating React components with specific structure.
 It allows to create 2 kind of React components:
 * React Component: Simple component with the following folder structure:
-    * `<Component name>.component.js`
-    * `<Component name>.style.js`
-    * `<Component name>.test.js`
-    * `index.js`
+    * `<Component name>.{jsx|tsx}`
+    * `<Component name>.{scss|css}`
+    * `<Component name>.test.{jsx|tsx}`
+    * `index.{jsx|tsx}`
 * React Container (or View): Component with the boilerplate for mapping application state to component's props by using [Redux](https://redux.js.org/) (`mapStateToProps &  mapDispatchToProps`).
-    * `<Component name>.container.js`
-    * `<Component name>.component.js`
-    * `<Component name>.style.js`
-    * `<Component name>.test.js`
-    * `index.js`
+    * `<Component name>.container.{jsx|tsx}`
+    * `<Component name>.{jsx|tsx}`
+    * `<Component name>.test.{jsx|tsx}`
+    * `index.{jsx|tsx}`
 
 For each one of these 2 kind of component, you can choose:
 * which React component to use: `PureComponent Class`, `Component Class` and `Stateless Function`
-* to use [ReactIntl](https://github.com/yahoo/react-intl) or not (multilingualism)
-* to use [Flow](https://flow.org/) or not (Type checker)
+* to use [ReactI18n](https://react.i18next.com/) or not (multilingualism)
+* to use [Typescript](https://www.typescriptlang.org/) or not (Type checker)
+* to use [Storybook](https://storybook.js.org/) or not (Component Explorer)
 
 See [Examples](./examples)
 
@@ -67,13 +67,15 @@ By default, Plop-react has default configurations:
 
 ``` javascript
 {
-  componentsPath: './source/components',    // default location for components
-  containersPath: './source/containers',    // default location for containers
-  defaultComponentName: 'Button',           // default name for component
-  defaultContainerName: 'Form',             // default name for containers
-  defaultComponentType: 'PureComponent Class',  // use PureComponent Class by default
-  useReactIntlByDefault: true,              // use ReactIntl by default
-  useFlowByDefault: true,                   // use Flow by default
+  componentsPath: './source/components',    		// default location for components
+  containersPath: './source/containers',    		// default location for containers
+  defaultComponentName: 'Button',           		// default name for component
+  defaultContainerName: 'Icon',             		// default name for containers
+  defaultComponentType: 'PureComponent Class',  	// use PureComponent Class by default
+  useReactI18nByDefault: true,              		// use ReactI18n by default
+  useTypescriptByDefault: true,                   	// use Typescript by default
+  useRedux: false,					// use Redux files by default  
+  useScss: true,					// use SCSS files by default
 };
 
 ```
@@ -90,7 +92,7 @@ module.exports = function(plop) {
     containersPath: './src/views',
     defaultComponentName: 'Component',
     defaultComponentType: 'PureComponent Class',
-    useFlowByDefault: false,
+    useTypescriptByDefault: false,
   });
 };
 ```
